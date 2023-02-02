@@ -12,8 +12,8 @@ import static org.awaitility.Awaitility.await;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.junit.Assert.assertEquals;
 
-@TestFor(${artifactId}Controller.class)
-public class ${artifactId}ControllerTest {
+@TestFor(FaceTrackingController.class)
+public class FaceTrackingControllerTest {
     static {
         System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "trace");
     }
@@ -21,7 +21,7 @@ public class ${artifactId}ControllerTest {
     @Inject
     private ArtifactManager artifactManager;
 
-    private ${artifactId}Controller controller;
+    private FaceTrackingController controller;
 
     @Rule
     public final GriffonUnitRule griffon = new GriffonUnitRule();
@@ -29,7 +29,7 @@ public class ${artifactId}ControllerTest {
     @Test
     public void executeClickAction() {
         // given:
-        ${artifactId}Model model = artifactManager.newInstance(${artifactId}Model.class);
+        FaceTrackingModel model = artifactManager.newInstance(FaceTrackingModel.class);
         controller.setModel(model);
 
         // when:

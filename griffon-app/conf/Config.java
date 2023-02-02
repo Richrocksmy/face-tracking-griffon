@@ -11,15 +11,15 @@ public class Config extends AbstractMapResourceBundle {
     protected void initialize(@Nonnull Map<String, Object> entries) {
         map(entries)
             .e("application", map()
-                .e("title", "${artifactId}")
-                .e("startupGroups", asList("${artifactId}"))
+                .e("title", "FaceTracking")
+                .e("startupGroups", asList("FaceTracking"))
                 .e("autoShutdown", true)
             )
             .e("mvcGroups", map()
-                .e("${artifactId}", map()
-                    .e("model", "org.richrocksmy.${artifactId}Model")
-                    .e("view", "org.richrocksmy.${artifactId}View")
-                    .e("controller", "org.richrocksmy.${artifactId}Controller")
+                .e("FaceTracking", map()
+                    .e("model", "org.richrocksmy.FaceTrackingModel")
+                    .e("view", "org.richrocksmy.FaceTrackingView")
+                    .e("controller", "org.richrocksmy.FaceTrackingController")
                 )
             );
     }

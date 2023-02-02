@@ -4,17 +4,18 @@ import griffon.core.artifact.GriffonController;
 import griffon.core.controller.ControllerAction;
 import griffon.inject.MVCMember;
 import griffon.metadata.ArtifactProviderFor;
-import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
 
 import griffon.transform.Threading;
+import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonController;
+
 import javax.annotation.Nonnull;
 
 @ArtifactProviderFor(GriffonController.class)
-public class ${artifactId}Controller extends AbstractGriffonController {
-    private ${artifactId}Model model;
+public class FaceTrackingController extends AbstractGriffonController {
+    private FaceTrackingModel model;
 
     @MVCMember
-    public void setModel(@Nonnull ${artifactId}Model model) {
+    public void setModel(@Nonnull FaceTrackingModel model) {
         this.model = model;
     }
 

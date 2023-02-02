@@ -19,17 +19,17 @@ import static java.util.Arrays.asList;
 import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
 
 @ArtifactProviderFor(GriffonView.class)
-public class ${artifactId}View extends AbstractSwingGriffonView {
-    private ${artifactId}Model model;
-    private ${artifactId}Controller controller;
+public class FaceTrackingView extends AbstractSwingGriffonView {
+    private FaceTrackingModel model;
+    private FaceTrackingController controller;
 
     @MVCMember
-    public void setModel(@Nonnull ${artifactId}Model model) {
+    public void setModel(@Nonnull FaceTrackingModel model) {
         this.model = model;
     }
 
     @MVCMember
-    public void setController(@Nonnull ${artifactId}Controller controller) {
+    public void setController(@Nonnull FaceTrackingController controller) {
         this.controller = controller;
     }
 
@@ -68,6 +68,6 @@ public class ${artifactId}View extends AbstractSwingGriffonView {
     }
 
     private Image getImage(String path) {
-        return Toolkit.getDefaultToolkit().getImage(${artifactId}View.class.getResource(path));
+        return Toolkit.getDefaultToolkit().getImage(FaceTrackingView.class.getResource(path));
     }
 }
